@@ -160,16 +160,23 @@ h2 {
 .sf figcaption { color: var(--fg-soft); font-size: 1.05rem; font-style: italic; }
 
 /* long form */
-.longform { display: grid; gap: 2rem; max-width: 70rem; margin-top: 5rem; }
+.longform { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.5rem; max-width: 70rem; margin-top: 5rem; }
+.longform > .hand, .longform > .lf-h { grid-column: 1 / -1; }
+.longform > .hand { margin-bottom: 0.5rem; }
 .longform .hand { font-size: 2.4rem; transform: rotate(-1deg); transform-origin: left center; }
 .lf-h { margin: 0; font-family: var(--font-display); font-weight: 700; font-size: clamp(2.4rem, 5vw, 3.6rem); line-height: 1.1; }
-.lf { border-top: 1px solid var(--rule); }
-.lf:last-of-type { border-bottom: 1px solid var(--rule); }
-.lf summary { list-style: none; cursor: pointer; display: grid; gap: 1rem; padding-block: 2.5rem; }
+.lf { background: var(--bg-2); border: 1px solid var(--rule); }
+.lf:not([open]) { aspect-ratio: 1 / 1; }
+.lf[open] { grid-column: 1 / -1; }
+.lf summary { list-style: none; cursor: pointer; display: flex; flex-direction: column; justify-content: space-between; gap: 1rem; padding: 1.75rem; height: 100%; }
+.lf[open] summary { height: auto; padding-bottom: 1rem; }
+.lf-b { padding-inline: 1.75rem; }
 .lf summary::-webkit-details-marker { display: none; }
-.lf-t { font-family: var(--font-display); font-weight: 700; font-size: clamp(3rem, 9vw, 6.2rem); line-height: 1.1; }
+.lf-t { font-family: var(--font-display); font-weight: 700; font-size: clamp(2.6rem, 4.4vw, 3.6rem); line-height: 1.05; }
 .lf summary:hover .lf-t { color: var(--pen); }
-.lf-o { font-style: italic; color: var(--fg-soft); font-size: 1.5rem; max-width: 46rem; }
+.lf-o { font-style: italic; color: var(--fg-soft); font-size: 1.2rem; max-width: 46rem; }
+.lf[open] .lf-t { font-size: clamp(3rem, 7vw, 5rem); }
+@media (max-width: 900px) { .longform { grid-template-columns: minmax(0, 1fr); } }
 .lf-m { color: var(--pen); font-size: 1.1rem; }
 .lf-m::after { content: " +"; }
 .lf[open] .lf-m::after { content: " \2212"; }
@@ -202,7 +209,7 @@ h2 {
 .pslide img { transition: transform 1.4s cubic-bezier(0.2, 0.7, 0.2, 1); }
 .pslide:hover img { transform: scale(1.045); }
 .lf-t { transition: color 0.3s ease, transform 0.5s cubic-bezier(0.2, 0.7, 0.2, 1); }
-.lf summary:hover .lf-t { transform: translateX(10px); }
+.lf summary:hover .lf-t { transform: translateX(6px); }
 
 /* photography carousel */
 .photos { display: grid; gap: 1.5rem; min-width: 0; }
@@ -327,7 +334,7 @@ footer p { margin: 0; }
       </svg>
     </div>
     <div class="text">
-      <p class="big">You probably want to know why this Studio exists. You probably want the full story told to you the way how all founding stories are told.</p>
+      <p class="big">You probably want to know why this Studio exists. You probably want the full story told to you the way all founding stories are told.</p>
       <p>But we don’t have the desire in us to tell it that way, so we choose not to. You see, conformity, following the status quo, has nothing to do with us. We are the contrarians, the rebels, the living fish; swimming against the current, shooting left and whizzing right, and flowing when we want to. Do you get it? It’s all about what we want to do and how we want to do it. So, when the world chooses to replicate and churn out uniformity, we will choose to be abstract, diverse, different. Because whether we like it or not, and even if we try to hide, we will stick out like a sore thumb.</p>
       <p>Look, we are those who see the world different, okay? We are those who see the magic in the mundane. We are those who hear music in our dreams and visualise sounds. We are those you might consider neurodivergent. But it is this divergence that gave birth to this studio — the house of unorthodox storytelling, where ideas come from the heart and not from a machine.</p>
     </div>
