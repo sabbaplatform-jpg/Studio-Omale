@@ -239,6 +239,7 @@ h2 {
 .offers { margin: 0; padding: 0; list-style: none; display: grid; }
 .price { font-family: var(--font-hand); font-style: normal; color: var(--pen); font-size: 2.6rem; line-height: 1; white-space: nowrap; transform: rotate(-2deg); transform-origin: right center; margin-left: auto; }
 .price-note { margin: 2rem 0 0; font-family: var(--font-hand); color: var(--pen); font-size: 2.4rem; line-height: 1.1; transform: rotate(-1deg); transform-origin: left center; }
+.offers ~ .pm { margin: 0.75rem 0 0; font-family: var(--font-hand); color: var(--pen); font-size: 2.2rem; line-height: 1.1; transform: rotate(-1.5deg); transform-origin: left center; }
 .offers li {
   display: flex; justify-content: space-between; align-items: baseline; gap: 1rem 3rem; flex-wrap: wrap;
   padding-block: 2.25rem; border-bottom: 1px solid var(--rule);
@@ -420,6 +421,7 @@ footer p { margin: 0; }
       <p class="hand">written by hand, captured with soul</p>
     </div>
     <ul class="offers">
+      <li><strong>Creative Direction</strong><span>The whole story, not just one asset: look, voice and message, held together.</span><em class="price">from £600 a day</em></li>
       <li><strong>Lines</strong><span>A set of taglines and headlines for one brand, written to be remembered.</span><em class="price">from £350</em></li>
       <li><strong>Manifesto</strong><span>One page that says what your brand believes, in a voice that is its own.</span><em class="price">from £800</em></li>
       <li><strong>Names</strong><span>Name options with the reasoning behind each one.</span><em class="price">from £1,500</em></li>
@@ -428,6 +430,7 @@ footer p { margin: 0; }
       <li><strong>Short Form Video</strong><span>Short form social media videos in the Studio Omale style: fast paced, text led, built from archive footage and GIFs.</span><em class="price">quoted per video</em></li>
     </ul>
     <p class="price-note">Prices are where we start. Send me the brief and I will quote in writing.</p>
+    <p class="hand pm">Everything arrives on time and on brief.</p>
   </section>
 
   <section class="row wide" id="clients">
@@ -582,7 +585,7 @@ footer p { margin: 0; }
 
   /* reveal on scroll */
   var rvSel = ['.margin > h2', '.text > *', '.piece .safe', '.piece .line', '.photos .ptrack', '.photos .controls', '.longform .lf-h', '.shortform .sf-h', '.sf figure', '.lf', '.marks li', '.clients li', '.offers li', '.contact .say', '.contact .cta-row', '.contact .reach', 'footer p'];
-  var wrSel = ['.margin > .hand', '.piece > .hand', '.photos > .hand', '.longform > .hand', '.shortform > .hand', '.marks .mark', '.price', '.price-note'];
+  var wrSel = ['.margin > .hand', '.piece > .hand', '.photos > .hand', '.longform > .hand', '.shortform > .hand', '.marks .mark', '.price', '.price-note', '.pm'];
   var io = new IntersectionObserver(function (es) {
     es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
   }, { threshold: 0.12, rootMargin: '0px 0px -6% 0px' });
