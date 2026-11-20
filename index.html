@@ -642,7 +642,7 @@ footer p { margin: 0; }
 
   <footer>
     <p>Studio Omale · House of Unorthodox Storytelling</p>
-    <p>Layer by layer.</p>
+    <p>© <span id="yr">2026</span> Studio Omale. All rights reserved.</p>
   </footer>
 
 </div>
@@ -946,6 +946,8 @@ footer p { margin: 0; }
   var sc;
   requestAnimationFrame(frame);
 })();
+
+document.getElementById('yr').textContent = new Date().getFullYear();
 </script>
 </body>
 </html>
