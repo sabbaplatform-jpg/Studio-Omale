@@ -8,6 +8,139 @@
 <meta property="og:type" content="website">
 <meta property="og:title" content="Studio Omale · A creative agency for rebels">
 <meta property="og:description" content="Studio Omale is a creative agency for rebels. Hand-written copy, film photography and short form video from the House of Unorthodox Storytelling.">
+<link rel="canonical" href="https://studioomale.com/">
+<meta property="og:url" content="https://studioomale.com/">
+<meta property="og:site_name" content="Studio Omale">
+<meta property="og:locale" content="en_GB">
+<meta property="og:image" content="https://studioomale.com/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="A knight facing a dragon, hand-drawn in ink with a red pen mark">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">{
+ "@context": "https://schema.org",
+ "@type": "ProfessionalService",
+ "@id": "https://studioomale.com/#studio",
+ "name": "Studio Omale",
+ "alternateName": "House of Unorthodox Storytelling",
+ "slogan": "A creative agency for rebels",
+ "url": "https://studioomale.com/",
+ "email": "hello@studioomale.com",
+ "telephone": "+44 7438 296756",
+ "image": "https://studioomale.com/og.png",
+ "description": "Studio Omale is a creative agency for rebels, based in London. Hand-written copy, film photography and short form video for independent brands.",
+ "areaServed": [
+  "London",
+  "United Kingdom",
+  "Europe"
+ ],
+ "knowsAbout": [
+  "Copywriting",
+  "Brand voice",
+  "Tone of voice",
+  "Brand naming",
+  "Taglines",
+  "Manifestos",
+  "Creative direction",
+  "Film photography",
+  "Short form video"
+ ],
+ "sameAs": [
+  "https://www.instagram.com/studioomale/"
+ ],
+ "founder": {
+  "@type": "Person",
+  "name": "Christopher Omale",
+  "jobTitle": "Chief Master Wordsmith"
+ },
+ "priceRange": "From £350",
+ "makesOffer": [
+  {
+   "@type": "Offer",
+   "itemOffered": {
+    "@type": "Service",
+    "name": "Creative Direction",
+    "description": "The whole story, not just one asset: look, voice and message, held together."
+   },
+   "priceSpecification": {
+    "@type": "UnitPriceSpecification",
+    "priceCurrency": "GBP",
+    "price": 600,
+    "unitText": "DAY",
+    "valueAddedTaxIncluded": false
+   }
+  },
+  {
+   "@type": "Offer",
+   "itemOffered": {
+    "@type": "Service",
+    "name": "Lines",
+    "description": "A set of taglines and headlines for one brand, written to be remembered."
+   },
+   "priceSpecification": {
+    "@type": "PriceSpecification",
+    "priceCurrency": "GBP",
+    "minPrice": 350
+   }
+  },
+  {
+   "@type": "Offer",
+   "itemOffered": {
+    "@type": "Service",
+    "name": "Manifesto",
+    "description": "One page that says what your brand believes, in a voice that is its own."
+   },
+   "priceSpecification": {
+    "@type": "PriceSpecification",
+    "priceCurrency": "GBP",
+    "minPrice": 800
+   }
+  },
+  {
+   "@type": "Offer",
+   "itemOffered": {
+    "@type": "Service",
+    "name": "Names",
+    "description": "Name options with the reasoning behind each one."
+   },
+   "priceSpecification": {
+    "@type": "PriceSpecification",
+    "priceCurrency": "GBP",
+    "minPrice": 1500
+   }
+  },
+  {
+   "@type": "Offer",
+   "itemOffered": {
+    "@type": "Service",
+    "name": "Voice",
+    "description": "Lines and captions every month, so your brand keeps sounding like itself."
+   },
+   "priceSpecification": {
+    "@type": "UnitPriceSpecification",
+    "priceCurrency": "GBP",
+    "price": 800,
+    "unitText": "MON"
+   }
+  },
+  {
+   "@type": "Offer",
+   "itemOffered": {
+    "@type": "Service",
+    "name": "Lifestyle Photography",
+    "description": "Lifestyle photography shot explicitly on film, with nothing altered artificially."
+   }
+  },
+  {
+   "@type": "Offer",
+   "itemOffered": {
+    "@type": "Service",
+    "name": "Short Form Video",
+    "description": "Short form social media videos: fast paced, text led, built from archive footage and GIFs."
+   }
+  }
+ ]
+}</script>
 <meta name="theme-color" content="#FFFFFF">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -170,11 +303,7 @@ h2 {
 .margin .scene .fig-d { width: 80%; max-width: 30rem; }
 .margin .scene .cap { font-size: clamp(1.7rem, 2.6vw, 2.2rem); }
 /* short form video */
-.shortform, .film { display: grid; gap: 1.5rem; max-width: 70rem; margin-top: 4rem; }
-.film .hand { font-size: 2.4rem; transform: rotate(-1deg); transform-origin: left center; }
-.film figure { margin: 0; display: grid; gap: 0.9rem; max-width: 56rem; }
-.film video { display: block; width: 100%; height: auto; aspect-ratio: 1920 / 816; background: #000; }
-.film figcaption { color: var(--fg-soft); font-size: 1.05rem; font-style: italic; }
+.shortform { display: grid; gap: 1.5rem; max-width: 70rem; margin-top: 4rem; }
 .shortform .hand { font-size: 2.4rem; transform: rotate(-1deg); transform-origin: left center; }
 .sf-h { margin: 0; font-family: var(--font-display); font-weight: 700; font-size: clamp(2.4rem, 5vw, 3.6rem); line-height: 1.1; }
 .sf { display: flex; flex-wrap: nowrap; gap: 1.5rem; align-items: flex-end; overflow-x: auto; scroll-snap-type: x proximity; padding-bottom: 0.75rem; -webkit-overflow-scrolling: touch; }
@@ -433,14 +562,6 @@ footer p { margin: 0; }
       </div>
     </div>
 
-    <div class="film" id="film">
-      <p class="hand">a longer watch</p>
-      <h3 class="sf-h">Film</h3>
-      <figure>
-        <video src="film-thaxter-stovell.mp4" poster="film-thaxter-stovell.jpg" muted loop playsinline controls preload="none" aria-label="Thaxter and Stovell, a two minute film"></video>
-        <figcaption>Thaxter &amp; Stovell.</figcaption>
-      </figure>
-    </div>
 
     <div class="longform" id="longform">
       <p class="hand">longer, and just as honest</p>
@@ -633,8 +754,8 @@ footer p { margin: 0; }
   if (!/\bjs\b/.test(root.className)) return; // reduced motion: everything stays still
 
   /* reveal on scroll */
-  var rvSel = ['.scene .ill-knight', '.scene .ill-dragon', '.margin > h2', '.text > *', '.piece .safe', '.piece .line', '.photos .ptrack', '.photos .controls', '.longform .lf-h', '.shortform .sf-h', '.sf figure', '.film figure', '.lf', '.marks li', '.clients li', '.offers li', '.contact .say', '.contact .cta-row', '.contact .reach', 'footer p'];
-  var wrSel = ['.scene .lbl', '.scene .cap', '.margin > .hand', '.piece > .hand', '.photos > .hand', '.longform > .hand', '.shortform > .hand', '.film > .hand', '.marks .mark', '.price', '.price-note', '.pm'];
+  var rvSel = ['.scene .ill-knight', '.scene .ill-dragon', '.margin > h2', '.text > *', '.piece .safe', '.piece .line', '.photos .ptrack', '.photos .controls', '.longform .lf-h', '.shortform .sf-h', '.sf figure', '.lf', '.marks li', '.clients li', '.offers li', '.contact .say', '.contact .cta-row', '.contact .reach', 'footer p'];
+  var wrSel = ['.scene .lbl', '.scene .cap', '.margin > .hand', '.piece > .hand', '.photos > .hand', '.longform > .hand', '.shortform > .hand', '.marks .mark', '.price', '.price-note', '.pm'];
   var io = new IntersectionObserver(function (es) {
     es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
   }, { threshold: 0.12, rootMargin: '0px 0px -6% 0px' });
@@ -743,7 +864,7 @@ footer p { margin: 0; }
 (function () {
   /* play the reels, muted, only while they are on screen */
   var reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
-  var vids = document.querySelectorAll('.sf video, .film video');
+  var vids = document.querySelectorAll('.sf video');
   if (reduce || !('IntersectionObserver' in window)) return;
   var o = new IntersectionObserver(function (es) {
     es.forEach(function (e) {
